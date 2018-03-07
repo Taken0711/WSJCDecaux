@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="338ed2cc-1d74-4f00-bb2f-b9d0f59c11e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/WSJCDecaux/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1afe8b41-4c18-4c49-b096-892c3a14a1a6" SourceId="1" SourceUrl="http://localhost:8733/WSJCDecaux/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3495cb6c-9217-4fef-8fed-ff8380dd4728" SourceId="1" SourceUrl="http://localhost:8733/WSJCDecaux/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="697d8a4d-2b36-42ef-83c5-22bd96a14829" SourceId="1" SourceUrl="http://localhost:8733/WSJCDecaux/mex" />
+    <MetadataFile FileName="WSJCDecaux.xsd" MetadataType="Schema" ID="d2abbc67-a076-4f23-884e-f05c16826779" SourceId="1" SourceUrl="http://localhost:8733/WSJCDecaux/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="f49af4e6-b834-4e8e-9b66-202da985a092" SourceId="1" SourceUrl="http://localhost:8733/WSJCDecaux/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

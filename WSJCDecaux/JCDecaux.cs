@@ -46,9 +46,21 @@ namespace WSJCDecaux
 
         }
 
-        public Station[] GetStations(string city)
+        public string[] GetContracts()
         {
-            JArray res = apiRequest("https://api.jcdecaux.com/vls/v1/stations?contract=" + city + "&apiKey=54624b5946c8283382dda67afe674be570af109f");
+            JArray res = apiRequest("https://api.jcdecaux.com/vls/v1/contracts?apiKey=54624b5946c8283382dda67afe674be570af109f");
+            IList<JToken> results = res.ToList();
+            string[] stations = new string[results.Count];
+            for (int i = 0; i < stations.Length; i++)
+            {
+                stations[i] = (string)results[i]["name"];
+            }
+            return stations;
+        }
+
+        public Station[] GetStations(string contract)
+        {
+            JArray res = apiRequest("https://api.jcdecaux.com/vls/v1/stations?contract=" + contract + "&apiKey=54624b5946c8283382dda67afe674be570af109f");
             IList<JToken> results = res.ToList();
             Station[] stations = new Station[results.Count];
             for(int i=0; i < stations.Length; i++)

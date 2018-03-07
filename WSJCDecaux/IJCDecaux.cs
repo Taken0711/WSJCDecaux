@@ -13,7 +13,9 @@ namespace WSJCDecaux
     public interface IJCDecaux
     {
         [OperationContract]
-        Station[] GetStations(string city);
+        Station[] GetStations(string contract);
+        [OperationContract]
+        string[] GetContracts();
 
     }
 
