@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSJCDecaux", "WSJCDecaux\WSJCDecaux.csproj", "{E7320E3B-1F89-4C2E-AA4C-DB188AFDB5A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "WpfApp1\Client.csproj", "{30BE1DF6-B200-4C9E-8AFF-C5491FAFD42C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUIClient", "WpfApp1\GUIClient.csproj", "{30BE1DF6-B200-4C9E-8AFF-C5491FAFD42C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E7320E3B-1F89-4C2E-AA4C-DB188AFDB5A6} = {E7320E3B-1F89-4C2E-AA4C-DB188AFDB5A6}
 	EndProjectSection
