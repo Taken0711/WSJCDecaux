@@ -114,7 +114,6 @@ namespace Client
             Station[] stations = await client.GetStationsAsync(contract);
             l = stations.ToList<Station>();
             this.progress.Value = 66;
-            l = stations.ToList<Station>();
             await Task.Run(() =>
             {
                 l.Sort(new StationComparer());

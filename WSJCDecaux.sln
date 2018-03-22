@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSJCDecaux", "WSJCDecaux\WSJCDecaux.csproj", "{E7320E3B-1F89-4C2E-AA4C-DB188AFDB5A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUIClient", "WpfApp1\GUIClient.csproj", "{30BE1DF6-B200-4C9E-8AFF-C5491FAFD42C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUIClient", "GUIClient\GUIClient.csproj", "{30BE1DF6-B200-4C9E-8AFF-C5491FAFD42C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLIClient", "CLIClient\CLIClient.csproj", "{739801A2-972C-4EE9-A834-88BBEB9A2AF4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E7320E3B-1F89-4C2E-AA4C-DB188AFDB5A6} = {E7320E3B-1F89-4C2E-AA4C-DB188AFDB5A6}
 	EndProjectSection
@@ -24,6 +26,10 @@ Global
 		{30BE1DF6-B200-4C9E-8AFF-C5491FAFD42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30BE1DF6-B200-4C9E-8AFF-C5491FAFD42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30BE1DF6-B200-4C9E-8AFF-C5491FAFD42C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{739801A2-972C-4EE9-A834-88BBEB9A2AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{739801A2-972C-4EE9-A834-88BBEB9A2AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{739801A2-972C-4EE9-A834-88BBEB9A2AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{739801A2-972C-4EE9-A834-88BBEB9A2AF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
