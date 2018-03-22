@@ -14,6 +14,10 @@ namespace WSJCDecaux
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
     public class JCDecaux : IJCDecaux
     {
+
+        private Dictionary<string, Station[]> cache = new Dictionary<string, Station[]>();
+        private Dictionary<string, DateTime> timestamps = new Dictionary<string, DateTime>();
+
         public static JArray apiRequest(string url)
         {
             Console.WriteLine("Getting data...");
@@ -60,14 +64,19 @@ namespace WSJCDecaux
 
         public Station[] GetStations(string contract)
         {
-            JArray res = apiRequest("https://api.jcdecaux.com/vls/v1/stations?contract=" + contract + "&apiKey=54624b5946c8283382dda67afe674be570af109f");
-            IList<JToken> results = res.ToList();
-            Station[] stations = new Station[results.Count];
-            for(int i=0; i < stations.Length; i++)
+            if (!(cache.ContainsKey(contract) && System.DateTime.Now < timestamps[contract].AddSeconds(300)))
             {
-                stations[i] = results[i].ToObject<Station>();
+                JArray res = apiRequest("https://api.jcdecaux.com/vls/v1/stations?contract=" + contract + "&apiKey=54624b5946c8283382dda67afe674be570af109f");
+                timestamps[contract] = System.DateTime.Now;
+                IList<JToken> results = res.ToList();
+                cache[contract] = new Station[results.Count];
+                for (int i = 0; i < cache[contract].Length; i++)
+                {
+                    cache[contract][i] = results[i].ToObject<Station>();
+                }
+
             }
-            return stations;
+            return cache[contract];
         }
 
     }

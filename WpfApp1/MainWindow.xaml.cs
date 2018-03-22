@@ -42,7 +42,7 @@ namespace Client
 
         private ObservableCollection<string> contractList = new ObservableCollection<string>();
         private ObservableCollection<string> stationList = new ObservableCollection<string>();
-        private Dictionary<string, List<Station>> cache = new Dictionary<string, List<Station>>();
+        private List<Station> contractStations;
         private string selectedContract;
         private string selectedStation;
 
@@ -77,7 +77,7 @@ namespace Client
             if (e.AddedItems.Count < 1)
                 return;
             string station = (string)e.AddedItems[0];
-            foreach(Station s in cache[selectedContract])
+            foreach(Station s in contractStations)
             {
                 if(s.Name == station)
                 {
@@ -110,37 +110,23 @@ namespace Client
             GettingData();
             stationList.Clear();
             List<Station> l;
-            if (cache.ContainsKey(contract))
+            JCDecauxClient client = new JCDecauxClient("IJCDecaux");
+            Station[] stations = await client.GetStationsAsync(contract);
+            l = stations.ToList<Station>();
+            this.progress.Value = 66;
+            l = stations.ToList<Station>();
+            await Task.Run(() =>
             {
-                l = cache[contract];
-            } else
-            {
-                JCDecauxClient client = new JCDecauxClient("IJCDecaux");
-                Station[] stations = await client.GetStationsAsync(contract);
-                l = stations.ToList<Station>();
-                this.progress.Value = 66;
-                l = stations.ToList<Station>();
-                await Task.Run(() =>
-                {
-                    l.Sort(new StationComparer());
-                });
+                l.Sort(new StationComparer());
+            });
 
-                cache[contract] = l;
-                foreach (Station s in l)
-                {
-                    stationList.Add(s.Name);
-                }
-                this.resultBox.Text = "Select a station";
-                this.progress.Value = 100;
+            contractStations = l;
+            foreach (Station s in l)
+            {
+                stationList.Add(s.Name);
             }
-            
-            
-        }
-
-        private void RefreshCache(object sender, RoutedEventArgs e)
-        {
-            cache = new Dictionary<string, List<Station>>();
-            GetContracts();
+            this.resultBox.Text = "Select a station";
+            this.progress.Value = 100;
         }
 
         private int GetStationIndex(Station s)

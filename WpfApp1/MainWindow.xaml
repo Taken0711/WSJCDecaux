@@ -13,6 +13,5 @@
         <ComboBox x:Name="stations" HorizontalAlignment="Left" Margin="203,99,0,0" VerticalAlignment="Top" Width="194"/>
         <TextBlock x:Name="resultBox" HorizontalAlignment="Left" Margin="86,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="101" Width="341"/>
         <ProgressBar x:Name="progress" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="517" Foreground="#FF0672B0"/>
-        <Button Content="Refresh cache" HorizontalAlignment="Left" Margin="86,289,0,0" VerticalAlignment="Top" Width="341" Click="RefreshCache"/>
     </Grid>
 </Window>
