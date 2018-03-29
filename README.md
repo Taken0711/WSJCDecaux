@@ -61,7 +61,7 @@ Available commands:
 
 ### GUI client
 
-![GUI](/docs/gui.png)
+![GUI](/docs/gui.PNG)
 
 ### Asynchronous calls
 
