@@ -73,7 +73,7 @@ namespace CLIClient
                 Console.WriteLine($"Not enough arguments. Usage: {commands["list-stations"].Item2}");
                 return true;
             }
-            Station[] stations = client.GetStations(args[0]);
+            Station[] stations = client.GetStations(args[0], 180);
             stationList = stations.ToList<Station>();
             stationList.Sort(new StationComparer());
             IEnumerable<Station> tmp;

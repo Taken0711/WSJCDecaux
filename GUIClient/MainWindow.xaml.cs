@@ -111,7 +111,7 @@ namespace Client
             stationList.Clear();
             List<Station> l;
             JCDecauxClient client = new JCDecauxClient("IJCDecaux");
-            Station[] stations = await client.GetStationsAsync(contract);
+            Station[] stations = await client.GetStationsAsync(contract, 60);
             l = stations.ToList<Station>();
             this.progress.Value = 66;
             await Task.Run(() =>

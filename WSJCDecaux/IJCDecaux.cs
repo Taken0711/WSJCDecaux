@@ -13,7 +13,7 @@ namespace WSJCDecaux
     public interface IJCDecaux
     {
         [OperationContract]
-        Station[] GetStations(string contract);
+        Station[] GetStations(string contract, int timeout);
         [OperationContract]
         string[] GetContracts();
 

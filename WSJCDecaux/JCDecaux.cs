@@ -52,6 +52,7 @@ namespace WSJCDecaux
 
         public string[] GetContracts()
         {
+            Console.WriteLine("Getting contracts...");
             JArray res = apiRequest("https://api.jcdecaux.com/vls/v1/contracts?apiKey=54624b5946c8283382dda67afe674be570af109f");
             IList<JToken> results = res.ToList();
             string[] stations = new string[results.Count];
@@ -59,12 +60,14 @@ namespace WSJCDecaux
             {
                 stations[i] = (string)results[i]["name"];
             }
+            Console.WriteLine("Return contracts from JCDecaux");
             return stations;
         }
 
-        public Station[] GetStations(string contract)
+        public Station[] GetStations(string contract, int timeout)
         {
-            if (!(cache.ContainsKey(contract) && System.DateTime.Now < timestamps[contract].AddSeconds(300)))
+            Console.WriteLine($"Getting stations for contract {contract}...");
+            if (!(cache.ContainsKey(contract) && System.DateTime.Now < timestamps[contract].AddSeconds(timeout)))
             {
                 JArray res = apiRequest("https://api.jcdecaux.com/vls/v1/stations?contract=" + contract + "&apiKey=54624b5946c8283382dda67afe674be570af109f");
                 timestamps[contract] = System.DateTime.Now;
@@ -74,7 +77,10 @@ namespace WSJCDecaux
                 {
                     cache[contract][i] = results[i].ToObject<Station>();
                 }
-
+                Console.WriteLine("Returning stations for contract {contract} from JCDecaux");
+            } else
+            {
+                Console.WriteLine("Returning stations for contract {contract} from cache");
             }
             return cache[contract];
         }

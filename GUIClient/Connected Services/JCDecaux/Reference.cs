@@ -127,10 +127,10 @@ namespace WpfApp1.JCDecaux {
     public interface IJCDecaux {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJCDecaux/GetStations", ReplyAction="http://tempuri.org/IJCDecaux/GetStationsResponse")]
-        WpfApp1.JCDecaux.Station[] GetStations(string contract);
+        WpfApp1.JCDecaux.Station[] GetStations(string contract, int timeout);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJCDecaux/GetStations", ReplyAction="http://tempuri.org/IJCDecaux/GetStationsResponse")]
-        System.Threading.Tasks.Task<WpfApp1.JCDecaux.Station[]> GetStationsAsync(string contract);
+        System.Threading.Tasks.Task<WpfApp1.JCDecaux.Station[]> GetStationsAsync(string contract, int timeout);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJCDecaux/GetContracts", ReplyAction="http://tempuri.org/IJCDecaux/GetContractsResponse")]
         string[] GetContracts();
@@ -166,12 +166,12 @@ namespace WpfApp1.JCDecaux {
                 base(binding, remoteAddress) {
         }
         
-        public WpfApp1.JCDecaux.Station[] GetStations(string contract) {
-            return base.Channel.GetStations(contract);
+        public WpfApp1.JCDecaux.Station[] GetStations(string contract, int timeout) {
+            return base.Channel.GetStations(contract, timeout);
         }
         
-        public System.Threading.Tasks.Task<WpfApp1.JCDecaux.Station[]> GetStationsAsync(string contract) {
-            return base.Channel.GetStationsAsync(contract);
+        public System.Threading.Tasks.Task<WpfApp1.JCDecaux.Station[]> GetStationsAsync(string contract, int timeout) {
+            return base.Channel.GetStationsAsync(contract, timeout);
         }
         
         public string[] GetContracts() {
