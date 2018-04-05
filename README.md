@@ -14,6 +14,7 @@
         - [GUI client](#gui-client)
         - [Asynchronous calls](#asynchronous-calls)
         - [Cache](#cache)
+    - [Event-based lab](#event-based-lab)
 
 ## Usage
 
@@ -28,6 +29,7 @@ To run this project, open the solution `WSJCDecaux.sln` with Visual Studio 2017,
 
  * `CLIClient`: The command-line interface client for querying the Intermediary Web Service
  * `GUIClient`: The graphical client for the [Graphical User Interface extension](#gui-client)
+ * `EventBasedClient`: The CLI client for the [Event-based lab](#event-based-lab)
  * `WSJCDecaux`: The SOAP Intermediary Web Service
 
 ## Extensions
@@ -70,3 +72,13 @@ Only the GUI client makes asynchronous call. Indeed, asynchonous call are not re
 ### Cache
 
 The IWS has a cached to limit the qery to the JCDecaux web service. The life time of the cache is configurable via the `GET` request. Thus to enhance this, the GUI client and the CLI client have a different cache life time. There are set respectively to 1 minute and 3 minutes.
+
+## Event-based lab
+
+The IWS now offer a subscribe method. You have to give a contract, a station and a timeout for the refresh to the web service.
+
+The `EventBasedClient` implement the new functionality with the `subscribe`:
+
+```
+subscribe CONTRACT [NAME_FILTERS...]
+```
