@@ -122,7 +122,9 @@ namespace EventBasedClient
 
         public void StationChanged(Station s)
         {
+            Console.WriteLine("");
             Console.WriteLine($"Update for station '{s.Name}' -- Bike stands: {s.BikeStands}, Available bike stands: {s.AvailableBikeStands}, Available bikes: {s.AvailableBikes}");
+            Console.Write(">>> ");
         }
 
         static void Main(string[] args)
