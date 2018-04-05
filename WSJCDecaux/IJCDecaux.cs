@@ -14,9 +14,9 @@ namespace WSJCDecaux
     {
         [OperationContract]
         Station[] GetStations(string contract, int timeout);
+
         [OperationContract]
         string[] GetContracts();
-
     }
 
     // Utilisez un contrat de données comme indiqué dans l'exemple ci-après pour ajouter les types composites aux opérations de service.
