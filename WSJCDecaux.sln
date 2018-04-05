@@ -12,6 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLIClient", "CLIClient\CLIC
 		{E7320E3B-1F89-4C2E-AA4C-DB188AFDB5A6} = {E7320E3B-1F89-4C2E-AA4C-DB188AFDB5A6}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBasedClient", "EventBasedClient\EventBasedClient.csproj", "{8D50F4B4-13C7-4C06-87B9-A7EDEA0E0283}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E7320E3B-1F89-4C2E-AA4C-DB188AFDB5A6} = {E7320E3B-1F89-4C2E-AA4C-DB188AFDB5A6}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +35,10 @@ Global
 		{739801A2-972C-4EE9-A834-88BBEB9A2AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{739801A2-972C-4EE9-A834-88BBEB9A2AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{739801A2-972C-4EE9-A834-88BBEB9A2AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D50F4B4-13C7-4C06-87B9-A7EDEA0E0283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D50F4B4-13C7-4C06-87B9-A7EDEA0E0283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D50F4B4-13C7-4C06-87B9-A7EDEA0E0283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D50F4B4-13C7-4C06-87B9-A7EDEA0E0283}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

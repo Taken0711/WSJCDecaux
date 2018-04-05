@@ -12,6 +12,10 @@ namespace WSJCDecaux
     public interface IJCDecauxEventBased
     {
         [OperationContract]
-        void SubscribeStationChanged(string contract, string station);
+        void SubscribeStationChanged(string contract, string station, int timer);
+        [OperationContract]
+        Station[] GetStations(string contract, int timeout);
+        [OperationContract]
+        string[] GetContracts();
     }
 }

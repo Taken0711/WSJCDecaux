@@ -54,6 +54,7 @@
     <Compile Include="JCDecauxEventBased.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="JCDecaux.cs" />
+    <Compile Include="Station.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

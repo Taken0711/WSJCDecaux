@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ab36e946-dd71-4cd9-86e1-df32bd3a381d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/WSJCDecauxEventBased/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="79fefd8e-d2ff-432d-b905-be17bd926424" SourceId="1" SourceUrl="http://localhost:8733/WSJCDecauxEventBased/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="9adbac55-eb91-4a79-8f34-9bc4b79fa284" SourceId="1" SourceUrl="http://localhost:8733/WSJCDecauxEventBased/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="bbca36c4-bd8e-4d3c-a1a4-00aed588891f" SourceId="1" SourceUrl="http://localhost:8733/WSJCDecauxEventBased/mex" />
+    <MetadataFile FileName="WSJCDecaux.xsd" MetadataType="Schema" ID="f2706d9c-e27c-4445-ac7d-e71e4453c4ca" SourceId="1" SourceUrl="http://localhost:8733/WSJCDecauxEventBased/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="2423f6ca-292d-4359-9602-ba65a4a2282e" SourceId="1" SourceUrl="http://localhost:8733/WSJCDecauxEventBased/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
