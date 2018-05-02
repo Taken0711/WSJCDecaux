@@ -3,6 +3,7 @@
 
 - [Velib Gateway Web Service](#velib-gateway-web-service)
         - [REST and SOAP WS Lab](#rest-and-soap-ws-lab)
+    - [Architecture](#architecture)
     - [Usage](#usage)
     - [Structure description](#structure-description)
     - [Extensions](#extensions)
@@ -15,6 +16,12 @@
         - [Asynchronous calls](#asynchronous-calls)
         - [Cache](#cache)
     - [Event-based lab](#event-based-lab)
+
+## Architecture
+
+![Architecture](docs/architecture.png)
+
+_See the PDF version [here](architecture.pdf)_
 
 ## Usage
 
@@ -63,7 +70,7 @@ Available commands:
 
 ### GUI client
 
-![GUI](/docs/gui.PNG)
+![GUI](docs/gui.PNG)
 
 ### Asynchronous calls
 
